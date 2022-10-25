@@ -1,0 +1,49 @@
+html {
+    line-height: 1.5em !important;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    display: block;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+
+a {
+    background-color: transparent;
+}
+
+img {
+    border-style: none;
+}
+
+.fullwidth-block .fullwidth-holder {
+    background: #fff;
+    padding: 30px;
+    margin: 30px 0;
+}
+
+.fullwidth-block .fullwidth-holder h1 {
+    margin: 0 0 30px;
+}
+
+.fullwidth-block .fullwidth-holder .wp-block-columns a {
+    color: var(--primary-color);
+}
+
+.fullwidth-block .fullwidth-holder .wp-block-columns a:hover {
+    color: var(--secondary-color);
+}
