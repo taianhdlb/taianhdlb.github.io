@@ -6,6 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="shortcut icon"
+        href="http://icons.iconarchive.com/icons/custom-icon-design/flatastic-5/512/Insert-hyperlink-icon.png"
+        type="image/png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
@@ -15,17 +23,138 @@
 </head>
 
 <body>
+    <!-- Header -->
+
+    <header>
+        <img class="header__logo"
+            src="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2021/05/travel-agency-booking-logo.png" />
+
+        <nav id="headerMenu" class="header__menu">
+            <ul class="header__menu--list">
+                <li>
+                    <a class="header__menu--items" href="">Home </a>
+                </li>
+                <li>
+                    <a class="header__menu--items" href="">Trips Filter </a>
+                </li>
+                <li>
+                    <a class="header__menu--items" href="">ABout Us </a>
+                </li>
+                <li>
+                    <a class="header__menu--items" href="">Blog </a>
+                </li>
+                <li>
+                    <a class="header__menu--items" href="">Contact </a>
+                </li>
+            </ul>
+        </nav>
+
+        <nav class="header__account">
+            <ul class="header__account--list">
+                <i id="fa-bars" class="fa-solid fa-bars"></i>
+                <li title="Notification" class="header__account--item">
+                    <i class="fa-solid fa-bell"></i>
+                </li>
+                <li title="Account" class="header__account--item">
+                    <a class="btn btn-primary user-btn" data-bs-toggle="modal" href="#exampleModalToggle" role="button">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- End Header -->
+
+    <!-- Sign In/ Sign Up Modal -->
+
+    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+        tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <img class="modal-header-logo"
+                        src="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2021/05/travel-agency-booking-logo.png" />
+                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Sign In</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body signIn-modal-body">
+                    <form class="signIn-form" action="">
+                        <div class="username-container">
+                            <label class="signIn-label" for="username">Username:</label>
+                            <input class="signIn-input" id="username" type="text">
+                        </div>
+                        <div class="password-container">
+                            <label class="signIn-label" for="password">Password:</label>
+                            <input class="signIn-input" id="password" type="password">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <div class="signIn-btn-container">
+                        <a class="signIn-btn" href="">Sign In</a>
+                    </div>
+                    <div class="signUp-btn-container">
+                        Don't have an account?
+                        <button class="btn btn-primary InsignUp-btn" data-bs-target="#exampleModalToggle2"
+                            data-bs-toggle="modal">
+                            Sign Up Here
+                        </button>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+        tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <img class="modal-header-logo"
+                        src="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2021/05/travel-agency-booking-logo.png" />
+                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Sign Up</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="register">
+                        <div class="signUp-username-container">
+                            <label class="signUp-label" for="signUp-username">Username:</label>
+                            <input class="signUp-input" id="signUp-username" type="username">
+                        </div>
+                        <div class="signUp-password-container">
+                            <label class="signUp-label" for="signUp-password">Password:</label>
+                            <input class="signUp-input" id="signUp-password" type="password">
+                        </div>
+                        <div class="signUp-email-container">
+                            <label class="signUp-label" for="signUp-email">Display Name:</label>
+                            <input class="signUp-input" id="signUp-email" type="text">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a class="signUp-btn" data-bs-toggle="modal" href="#exampleModalToggle">
+                        Sign Up
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
         <div class="fullwidth-holder">
             <h1>About Us</h1>
-            <img loading="lazy" width="1200" height="430" class="wp-block-cover" alt=""
-                src="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/mathias-jensen-1125911-1-scaled.jpg"
-                data-object-fit="cover"
-                srcset="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/mathias-jensen-1125911-1-scaled.jpg 2560w, https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/mathias-jensen-1125911-1-300x200.jpg 300w, https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/mathias-jensen-1125911-1-1024x683.jpg 1024w, https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/mathias-jensen-1125911-1-768x512.jpg 768w, https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/mathias-jensen-1125911-1-1536x1024.jpg 1536w, https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/mathias-jensen-1125911-1-2048x1365.jpg 2048w, https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/mathias-jensen-1125911-1-90x60.jpg 90w"
-                sizes="(max-width: 2560px) 100vw, 2560px" style="filter:brightness(50%);" />
-            <div class="wp-block-cover__inner-container">
-                <span>Create your Travel Booking Website with Travel
-                    Agency Theme</span>
+            <div class="wp-block-cover-container">
+                <img loading="lazy" width="1200" height="430" class="wp-block-cover" alt=""
+                    src="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/mathias-jensen-1125911-1-scaled.jpg"
+                    data-object-fit="cover"
+                    srcset="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/mathias-jensen-1125911-1-scaled.jpg 2560w, https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/mathias-jensen-1125911-1-300x200.jpg 300w, https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/mathias-jensen-1125911-1-1024x683.jpg 1024w, https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/mathias-jensen-1125911-1-768x512.jpg 768w, https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/mathias-jensen-1125911-1-1536x1024.jpg 1536w, https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/mathias-jensen-1125911-1-2048x1365.jpg 2048w, https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/mathias-jensen-1125911-1-90x60.jpg 90w"
+                    sizes="(max-width: 2560px) 100vw, 2560px" style="filter:brightness(50%);" />
+                <div class="wp-block-cover__inner-container">
+                    <span>Create your Travel Booking Website with Travel
+                        Agency Theme</span>
+                </div>
             </div>
             <p>Travel Agency is a free WordPress theme that you can use to create stunning and functional travel and
                 tour booking website. It is lightweight, responsive, and SEO friendly. It is compatible with WP Travel
@@ -271,6 +400,18 @@
                             <figcaption class="blocks-gallery-item__caption">Musta Moz</figcaption>
                         </figure>
                     </li>
+                    <li class="blocks-gallery-item">
+                        <figure><img loading="lazy" width="297" height="369.44"
+                                src="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/munib-saad-vr6rvuV3FWw-unsplash201.jpg"
+                                alt="" data-id="1596"
+                                data-full-url="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/munib-saad-vr6rvuV3FWw-unsplash201.jpg"
+                                data-link="https://thebootstrapthemes.com/previews/travel-agency-booking/munib-saad-vr6rvuv3fww-unsplash1/"
+                                class="wp-image-1596"
+                                srcset="https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/munib-saad-vr6rvuV3FWw-unsplash201.jpg 410w, https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/munib-saad-vr6rvuV3FWw-unsplash201-241x300.jpg 241w, https://thebootstrapthemes.com/previews/travel-agency-booking/wp-content/uploads/sites/48/2017/11/munib-saad-vr6rvuV3FWw-unsplash201-48x60.jpg 48w"
+                                sizes="(max-width: 410px) 100vw, 410px">
+                            <figcaption class="blocks-gallery-item__caption">Home John</figcaption>
+                        </figure>
+                    </li>
             </figure>
             <hr
                 class="wp-block-separator has-text-color has-background has-light-green-cyan-background-color has-light-green-cyan-color">
@@ -406,6 +547,85 @@
                 aircraft and pilots. Indeed, air travel has become so ubiquitous in the 21st century that one woman,
                 Alexis Alford, visited all 196 countries before the age of 21.</p>
         </div>
+        <!-- Footer -->
+        <footer>
+            <div class="footer__widget">
+                <div class="footer__widget--container">
+                    <h2 class="footer__widget--title contactInfo">Contact Info</h2>
+                    <div class="widgetTitle-line"></div>
+                    <nav class="textWidget">
+                        <p>Phone: +977-1-47012454</p>
+                        <p>Email: info@xyz-adventure.com</p>
+                        <p>GPO Box : 5612, Thamel ,Kathmandu</p>
+                        <p>Fax Number: 503-555-1213</p>
+                    </nav>
+                </div>
+
+                <div class="footer__widget--container">
+                    <h2 class="footer__widget--title destination">Destination</h2>
+                    <div class="widgetTitle-line"></div>
+                    <ul class="footer__menu">
+                        <li><a class="footer__menu--item" href="http://"> Nepal </a></li>
+                        <li><a class="footer__menu--item" href="http://"> India </a></li>
+                        <li><a class="footer__menu--item" href="http://"> Tibet </a></li>
+                        <li><a class="footer__menu--item" href="http://"> Maldives </a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__widget--container">
+                    <h2 class="footer__widget--title activities">Activities</h2>
+                    <div class="widgetTitle-line"></div>
+                    <ul class="footer__menu">
+                        <li><a class="footer__menu--item" href="http://"> Road Cycling </a></li>
+                        <li><a class="footer__menu--item" href="http://"> Cultural Tours </a></li>
+                        <li><a class="footer__menu--item" href="http://"> Peak Climbing </a></li>
+                        <li><a class="footer__menu--item" href="http://"> Jungle Safari </a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__widget--container">
+                    <h2 class="footer__widget--title tripTypes">Trip Types</h2>
+                    <div class="widgetTitle-line"></div>
+                    <ul class="footer__menu">
+                        <li><a class="footer__menu--item" href="http://"> Nature Walk </a></li>
+                        <li><a class="footer__menu--item" href="http://"> Child-friendly </a></li>
+                        <li><a class="footer__menu--item" href="http://"> Dog-friendly </a></li>
+                        <li><a class="footer__menu--item" href="http://"> Cultural </a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyRight">
+                Powered by <a href="">C4EJS Gen 130</a> | Theme by <a href="">Team 1 - Group 3</a>
+            </div>
+
+        </footer>
+
+        <div class="footer__contact">
+            <div class="phone-email">
+                <div class="phone">
+                    <a class="phoneEmail-link" href=""><i class="fa-solid fa-phone"></i> 02477705666</a>
+                </div>
+                <div class="email">
+                    <a class="phoneEmail-link" href=""><i class="fa-regular fa-envelope"></i> contact@mindx.edu.vn</a>
+                </div>
+            </div>
+
+            <div class="social-navigation">
+                <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+                <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href=""><i class="fa-brands fa-airbnb"></i></a>
+            </div>
+        </div>
+
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+            crossorigin="anonymous"></script>
+        <script src="/HeaderFooter.js"></script>
 </body>
 
 </html>
