@@ -105,7 +105,7 @@ header {
     padding-top: 30px;
 }
 
-.signIn-btn,
+.logIn-btn,
 .signUp-btn {
     background-color: #22a6b3;
     padding: 8px 100px;
@@ -113,6 +113,7 @@ header {
     color: #fff;
     transition: all 0.2s ease;
     margin-bottom: 20px;
+    cursor: pointer;
 }
 
 .signUp-btn:hover {
@@ -120,12 +121,12 @@ header {
     background-color: rgb(0, 192, 112);
 }
 
-.signIn-btn:hover {
+.logIn-btn:hover {
     color: #fff;
     background-color: rgb(0, 192, 112);
 }
 
-.signUp-btn-container {
+.InsignUp-btn-container {
     display: flex;
     align-items: center;
     font-size: 14px;
@@ -149,24 +150,24 @@ header {
 }
 
 .modal-body {
-    margin-bottom: 30px;
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
-.username-container,
-.password-container,
-.signUp-username-container,
-.signUp-password-container,
-.signUp-email-container {
-    width: 80%;
+.form-item-container {
+    width: 100%;
     display: flex;
     justify-self: center;
     justify-content: space-between;
     align-items: flex-end;
-    margin-top: 20px;
-    margin-left: 40px;
+    margin-top: 30px;
 }
 
-.signIn-input,
+.logIn-input,
 .signUp-input {
     font-size: 15px;
     width: 250px;
@@ -177,6 +178,36 @@ header {
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 
+.logIn-label {
+    margin-right: 20px;
+}
+
+
+
+.signUp-input {
+    align-self: flex-end;
+    width: 250px;
+    margin-left: 20px;
+}
+
+.material-icons-outlined {
+    position: absolute;
+    right: 40px;
+    cursor: pointer;
+    color: gray;
+}
+
+.errorText {
+    color: red;
+    font-size: 13px;
+    margin-top: 15px;
+    height: 15px;
+}
+
+#username-errorText {
+    margin-bottom: -20px;
+    margin-top: 5px;
+}
 
 /* End Header */
 
