@@ -1,3 +1,4 @@
+/* Toggle Header */
 
 function toggleHeader() {
     let $bar = document.getElementById('fa-bars');
